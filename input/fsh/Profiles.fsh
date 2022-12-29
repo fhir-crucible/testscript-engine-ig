@@ -13,4 +13,7 @@ Parent:         TestReport
 Id:             testscript-engine-testreport
 Title:          "TestScript Engine TestReport"
 Description:    "TestReport with extensions specific to the MITRE FHIR Foundry testscript-engine and testscript-generator"
-* extension contains dynamic-input named DynamicInput 0..*
+* extension contains 
+    dynamic-input named DynamicInput 0..* and
+    executed-as-subtest named ExecutedAsSubtest 0..1 and
+    executed-as-subtest-must-pass named MustPass 0..1

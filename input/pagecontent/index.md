@@ -8,6 +8,8 @@ The FHIR TestScript resource supports a linear and concrete execution mode, wher
 
 The TestScript Engine takes the approach of providing targeted extensions to allow TestScript authors to react to anticipated differences across execution, while keeping tests specified using the TestScript language. It currently supports two extensions for subtest execution, both one for [direct execution](StructureDefinition-assert-subtest.html) and one supporting [multiple executions](StructureDefinition-assert-subtest-each.html) on each result of an FHIRPath expression (in the future, dynamic fixture binding may be supported as well).
 
+To help with the interpretation the results, the TestScript Engine adds [additional](StructureDefinition-executed-as-subtest.html) [extensions](StructureDefinition-executed-as-subtest-must-pass.html) to the TestReport instances generated from these subtest executions.
+
 ### TestReport Variable Input Record
 
 The value of some variables may be provided at execution time, either through user input or binding during subtest execution. To ensure that the TestReport instance contains all the information about the test execution, the TestScript Engine adds an [extension](StructureDefinition-dynamic-input.html) to TestReport instances for each dynamically provided input variable.

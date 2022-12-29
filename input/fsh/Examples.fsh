@@ -76,11 +76,15 @@ Instance: subtest-executed-each-fail
 InstanceOf: TestScriptEngineReport
 Description: "Failing TestReport instance with bound value from a subtest-each execution"
 Usage: #example
-* extension.extension[0].url = "variableName"
-* extension.extension[=].valueString = "checkValue"
-* extension.extension[+].url = "value"
-* extension.extension[=].valueString = "Windsor"
-* extension.url = "https://fhir-crucible.github.io/testscript-engine-ig/StructureDefinition/dynamic-input"
+* extension[+].extension[0].url = "variableName"
+* extension[=].extension[=].valueString = "checkValue"
+* extension[=].extension[+].url = "value"
+* extension[=].extension[=].valueString = "Windsor"
+* extension[=].url = "https://fhir-crucible.github.io/testscript-engine-ig/StructureDefinition/dynamic-input"
+* extension[+].url = "https://fhir-crucible.github.io/testscript-engine-ig/StructureDefinition/executed-as-subtest"
+* extension[=].valueBoolean = true
+* extension[+].url = "https://fhir-crucible.github.io/testscript-engine-ig/StructureDefinition/executed-as-subtest-must-pass"
+* extension[=].valueBoolean = false
 * name = "TestReport for SubtestToExecuteExample"
 * status = #completed
 * testScript = Reference(https://github.com/fhir-crucible/testscript-generator/SubtestToExecuteExample) "SubtestToExecuteExample"
@@ -102,6 +106,10 @@ Usage: #example
 * extension.extension[+].url = "value"
 * extension.extension[=].valueString = "Chalmers"
 * extension.url = "https://fhir-crucible.github.io/testscript-engine-ig/StructureDefinition/dynamic-input"
+* extension[+].url = "https://fhir-crucible.github.io/testscript-engine-ig/StructureDefinition/executed-as-subtest"
+* extension[=].valueBoolean = true
+* extension[+].url = "https://fhir-crucible.github.io/testscript-engine-ig/StructureDefinition/executed-as-subtest-must-pass"
+* extension[=].valueBoolean = false
 * name = "TestReport for SubtestToExecuteExample"
 * status = #completed
 * testScript = Reference(https://github.com/fhir-crucible/testscript-generator/SubtestToExecuteExample) "SubtestToExecuteExample"
@@ -123,6 +131,10 @@ Usage: #example
 * extension.extension[+].url = "value"
 * extension.extension[=].valueString = "Chalmers"
 * extension.url = "https://fhir-crucible.github.io/testscript-engine-ig/StructureDefinition/dynamic-input"
+* extension[+].url = "https://fhir-crucible.github.io/testscript-engine-ig/StructureDefinition/executed-as-subtest"
+* extension[=].valueBoolean = true
+* extension[+].url = "https://fhir-crucible.github.io/testscript-engine-ig/StructureDefinition/executed-as-subtest-must-pass"
+* extension[=].valueBoolean = true
 * name = "TestReport for SubtestToExecuteExample"
 * status = #completed
 * testScript = Reference(https://github.com/fhir-crucible/testscript-generator/SubtestToExecuteExample) "SubtestToExecuteExample"

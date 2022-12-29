@@ -59,3 +59,17 @@ Id: dynamic-input
 * extension[variableName].value[x] only string
 * extension[value] ^short = "Dynamically bound value"
 * extension[value].value[x] only string
+
+Extension: ExecutedAsSubtest
+Description: "Flag indicating whether the TestScript was executed as a subtest."
+Id: executed-as-subtest
+* ^context.type = #element
+* ^context.expression = "TestReport"
+* value[x] only boolean
+
+Extension: ExecutedAsSubtestMustPass
+Description: "Flag indicating whether the TestScript was required to pass when executed as a subtest."
+Id: executed-as-subtest-must-pass
+* ^context.type = #element
+* ^context.expression = "TestReport"
+* value[x] only boolean
