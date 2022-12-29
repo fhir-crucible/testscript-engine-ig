@@ -1,0 +1,48 @@
+{
+  "resourceType" : "TestReport",
+  "id" : "subtest-executing-pass",
+  "text" : {
+    "status" : "extensions",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: TestReport</b><a name=\"subtest-executing-pass\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource TestReport &quot;subtest-executing-pass&quot; </p></div><blockquote><p><b>DynamicInput</b></p><p><b>value</b>: directExecuteInput</p><p><b>value</b>: Chalmers</p></blockquote><p><b>name</b>: TestReport for SubtestExecutionExample</p><p><b>status</b>: completed</p><p><b>testScript</b>: <a href=\"https://github.com/fhir-crucible/testscript-generator/SubtestExecutionExample\">https://github.com/fhir-crucible/testscript-generator/SubtestExecutionExample: SubtestExecutionExample</a> &quot;SubtestExecutionExample&quot;</p><p><b>result</b>: pass</p><p><b>score</b>: 100</p><p><b>tester</b>: The MITRE Corporation</p><p><b>issued</b>: 2022-12-28 17:14:30-0500</p><blockquote><p><b>test</b></p><blockquote><p><b>action</b></p><blockquote><p><b>assert</b></p><p><b>result</b>: pass</p><p><b>message</b>: Execute subtest directly</p></blockquote></blockquote></blockquote><blockquote><p><b>test</b></p><blockquote><p><b>action</b></p><blockquote><p><b>assert</b></p><p><b>result</b>: pass</p><p><b>message</b>: Execute_subtest_on_list_of_values</p></blockquote></blockquote></blockquote></div>"
+  },
+  "extension" : [{
+    "extension" : [{
+      "url" : "variableName",
+      "valueString" : "directExecuteInput"
+    },
+    {
+      "url" : "value",
+      "valueString" : "Chalmers"
+    }],
+    "url" : "https://fhir-crucible.github.io/testscript-engine-ig/StructureDefinition/dynamic-input"
+  }],
+  "name" : "TestReport for SubtestExecutionExample",
+  "status" : "completed",
+  "testScript" : {
+    "reference" : "https://github.com/fhir-crucible/testscript-generator/SubtestExecutionExample",
+    "type" : "TestScript",
+    "display" : "SubtestExecutionExample"
+  },
+  "result" : "pass",
+  "score" : 100,
+  "tester" : "The MITRE Corporation",
+  "issued" : "2022-12-28T17:14:30-05:00",
+  "test" : [{
+    "action" : [{
+      "assert" : {
+        "id" : "Directly_execute",
+        "result" : "pass",
+        "message" : "Execute subtest directly"
+      }
+    }]
+  },
+  {
+    "action" : [{
+      "assert" : {
+        "id" : "Execute_subtest_on_list_of_values",
+        "result" : "pass",
+        "message" : "Execute_subtest_on_list_of_values"
+      }
+    }]
+  }]
+}

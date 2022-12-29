@@ -1,0 +1,72 @@
+[
+  {
+    "id" : "testscriptengineig",
+    "type" : "ImplementationGuide",
+    "url" : "https://fhir-crucible.github.io/testscript-engine-ig/ImplementationGuide/testscriptengineig",
+    "version" : "0.0.1",
+    "name" : "TestScriptEngineIG"
+  },
+  {
+    "id" : "assert-subtest",
+    "type" : "StructureDefinition",
+    "url" : "https://fhir-crucible.github.io/testscript-engine-ig/StructureDefinition/assert-subtest",
+    "version" : "0.0.1",
+    "name" : "AssertSubtest"
+  },
+  {
+    "id" : "assert-subtest-each",
+    "type" : "StructureDefinition",
+    "url" : "https://fhir-crucible.github.io/testscript-engine-ig/StructureDefinition/assert-subtest-each",
+    "version" : "0.0.1",
+    "name" : "AssertSubtestEach"
+  },
+  {
+    "id" : "dynamic-input",
+    "type" : "StructureDefinition",
+    "url" : "https://fhir-crucible.github.io/testscript-engine-ig/StructureDefinition/dynamic-input",
+    "version" : "0.0.1",
+    "name" : "DynamicInput"
+  },
+  {
+    "id" : "executed-as-subtest",
+    "type" : "StructureDefinition",
+    "url" : "https://fhir-crucible.github.io/testscript-engine-ig/StructureDefinition/executed-as-subtest",
+    "version" : "0.0.1",
+    "name" : "ExecutedAsSubtest"
+  },
+  {
+    "id" : "executed-as-subtest-must-pass",
+    "type" : "StructureDefinition",
+    "url" : "https://fhir-crucible.github.io/testscript-engine-ig/StructureDefinition/executed-as-subtest-must-pass",
+    "version" : "0.0.1",
+    "name" : "ExecutedAsSubtestMustPass"
+  },
+  {
+    "id" : "testscript-engine-testreport",
+    "type" : "StructureDefinition",
+    "url" : "https://fhir-crucible.github.io/testscript-engine-ig/StructureDefinition/testscript-engine-testreport",
+    "version" : "0.0.1",
+    "name" : "TestScriptEngineReport"
+  },
+  {
+    "id" : "testscript-engine-testscript",
+    "type" : "StructureDefinition",
+    "url" : "https://fhir-crucible.github.io/testscript-engine-ig/StructureDefinition/testscript-engine-testscript",
+    "version" : "0.0.1",
+    "name" : "TestScriptEngineScript"
+  },
+  {
+    "id" : "subtest-execution-example",
+    "type" : "TestScript",
+    "url" : "https://github.com/fhir-crucible/testscript-generator/SubtestExecutionExample",
+    "version" : "0.0.1",
+    "name" : "SubtestExecutionExample"
+  },
+  {
+    "id" : "subtest-to-execute-example",
+    "type" : "TestScript",
+    "url" : "https://github.com/fhir-crucible/testscript-generator/SubtestToExecuteExample",
+    "version" : "0.0.1",
+    "name" : "SubtestToExecuteExample"
+  }
+]

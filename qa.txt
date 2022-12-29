@@ -1,0 +1,46 @@
+﻿TestScriptEngineIG : Validation Results
+=========================================
+
+err = 0, warn = 7, info = 0
+IG Publisher Version: 1.2.25 Out of date - current version is ?pub-ver-1?
+Generated Thu Dec 29 20:10:19 UTC 2022. FHIR version 4.0.1 for testscriptengineig#0.0.1 (canonical = https://fhir-crucible.github.io/testscript-engine-ig)
+ Build Errors : 0 / 4 / 0
+ /github/workspace/fsh-generated/resources/ImplementationGuide-testscriptengineig : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/Patient-patient-fixture : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-assert-subtest : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-assert-subtest-each : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-dynamic-input : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-executed-as-subtest : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-executed-as-subtest-must-pass : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-testscript-engine-testreport : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-testscript-engine-testscript : 0 / 3 / 1
+ /github/workspace/fsh-generated/resources/TestReport-subtest-executed-direct-pass : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/TestReport-subtest-executed-each-fail : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/TestReport-subtest-executed-each-pass : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/TestReport-subtest-executing-pass : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/TestScript-subtest-execution-example : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/TestScript-subtest-to-execute-example : 0 / 0 / 1
+</table>
+== n/a ==
+WARNING: 1: The HTML fragment 'ip-statements.xhtml' is not included anywhere in the produced implementation guide
+WARNING: 2: An HTML fragment from the set [cross-version-analysis.xhtml, cross-version-analysis-inline.xhtml] is not included anywhere in the produced implementation guide
+WARNING: 3: An HTML fragment from the set [dependency-table.xhtml, dependency-table-short.xhtml] is not included anywhere in the produced implementation guide
+WARNING: 4: The HTML fragment 'globals-table.xhtml' is not included anywhere in the produced implementation guide
+== fsh-generated/resources/ImplementationGuide-testscriptengineig.json ==
+== fsh-generated/resources/Patient-patient-fixture.json ==
+== fsh-generated/resources/StructureDefinition-assert-subtest.json ==
+== fsh-generated/resources/StructureDefinition-assert-subtest-each.json ==
+== fsh-generated/resources/StructureDefinition-dynamic-input.json ==
+== fsh-generated/resources/StructureDefinition-executed-as-subtest.json ==
+== fsh-generated/resources/StructureDefinition-executed-as-subtest-must-pass.json ==
+== fsh-generated/resources/StructureDefinition-testscript-engine-testreport.json ==
+== fsh-generated/resources/StructureDefinition-testscript-engine-testscript.json ==
+WARNING: StructureDefinition/testscript-engine-testscript: StructureDefinition.snapshot.element[128].comment: The markdown contains content that appears to be an embedded HTML tag starting at 'Op'. This will (or SHOULD) be escaped by the presentation layer. The content should be checked to confirm that this is the desired behaviour
+WARNING: StructureDefinition/testscript-engine-testscript: StructureDefinition.snapshot.element[132].comment: The markdown contains content that appears to be an embedded HTML tag starting at 'Th'. This will (or SHOULD) be escaped by the presentation layer. The content should be checked to confirm that this is the desired behaviour
+WARNING: StructureDefinition/testscript-engine-testscript: StructureDefinition.snapshot.element[133].comment: The markdown contains content that appears to be an embedded HTML tag starting at 'Th'. This will (or SHOULD) be escaped by the presentation layer. The content should be checked to confirm that this is the desired behaviour
+== fsh-generated/resources/TestReport-subtest-executed-direct-pass.json ==
+== fsh-generated/resources/TestReport-subtest-executed-each-fail.json ==
+== fsh-generated/resources/TestReport-subtest-executed-each-pass.json ==
+== fsh-generated/resources/TestReport-subtest-executing-pass.json ==
+== fsh-generated/resources/TestScript-subtest-execution-example.json ==
+== fsh-generated/resources/TestScript-subtest-to-execute-example.json ==

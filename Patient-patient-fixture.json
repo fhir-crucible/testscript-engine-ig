@@ -1,0 +1,27 @@
+{
+  "resourceType" : "Patient",
+  "id" : "patient-fixture",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\"><b>Jim </b> (no stated gender), DoB Unknown</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Alternate names (see the one above)\">Alt Names:</td><td colspan=\"3\"><ul><li>Peter James Chalmers (OFFICIAL)</li><li>Peter James Windsor (MAIDEN)</li></ul></td></tr></table></div>"
+  },
+  "name" : [{
+    "use" : "official",
+    "family" : "Chalmers",
+    "given" : ["Peter",
+    "James"]
+  },
+  {
+    "use" : "usual",
+    "given" : ["Jim"]
+  },
+  {
+    "use" : "maiden",
+    "family" : "Windsor",
+    "given" : ["Peter",
+    "James"],
+    "period" : {
+      "end" : "2002"
+    }
+  }]
+}

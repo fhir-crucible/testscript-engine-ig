@@ -1,0 +1,77 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://fhir-crucible.github.io/testscript-engine-ig/TestScript/subtest-to-execute-example> a fhir:TestScript;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "subtest-to-execute-example"]; # 
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://fhir-crucible.github.io/testscript-engine-ig/StructureDefinition/testscript-engine-testscript";
+       fhir:index 0;
+       fhir:link <https://fhir-crucible.github.io/testscript-engine-ig/StructureDefinition/testscript-engine-testscript>
+     ]
+  ]; # 
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: TestScript</b><a name=\"subtest-to-execute-example\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource TestScript &quot;subtest-to-execute-example&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-testscript-engine-testscript.html\">TestScript Engine TestScript</a></p></div><p><b>url</b>: <code>https://github.com/fhir-crucible/testscript-generator/SubtestToExecuteExample</code></p><p><b>version</b>: 0.0.1</p><p><b>name</b>: SubtestToExecuteExample</p><p><b>title</b>: Subtest to execute example</p><p><b>status</b>: draft</p><p><b>experimental</b>: true</p><p><b>date</b>: 2022-12-27 13:00:51-0400</p><p><b>publisher</b>: MITRE</p><p><b>contact</b>: MITRE: <a href=\"https://fhir-crucible.github.io/testscript-engine-ig\">https://fhir-crucible.github.io/testscript-engine-ig</a></p><blockquote><p><b>fixture</b></p><p><b>autocreate</b>: false</p><p><b>autodelete</b>: false</p><p><b>resource</b>: <a href=\"Patient-patient-fixture.html\">Patient/patient-fixture</a> &quot; CHALMERS&quot;</p></blockquote><h3>Variables</h3><table class=\"grid\"><tr><td>-</td><td><b>Name</b></td><td><b>DefaultValue</b></td><td><b>Description</b></td></tr><tr><td>*</td><td>checkValue</td><td>example</td><td>value that will be compared</td></tr></table><blockquote><p><b>test</b></p><p><b>name</b>: string compare</p><blockquote><p><b>action</b></p><h3>Asserts</h3><table class=\"grid\"><tr><td>-</td><td><b>Label</b></td><td><b>Description</b></td><td><b>Expression</b></td><td><b>SourceId</b></td><td><b>Value</b></td><td><b>WarningOnly</b></td></tr><tr><td>*</td><td>compare_receiver_value</td><td>compare received value</td><td>'Chalmers'</td><td>notUsed</td><td>${checkValue}</td><td>false</td></tr></table></blockquote></blockquote></div>"
+  ]; # 
+  fhir:TestScript.url [ fhir:value "https://github.com/fhir-crucible/testscript-generator/SubtestToExecuteExample"]; # 
+  fhir:TestScript.version [ fhir:value "0.0.1"]; # 
+  fhir:TestScript.name [ fhir:value "SubtestToExecuteExample"]; # 
+  fhir:TestScript.title [ fhir:value "Subtest to execute example"]; # 
+  fhir:TestScript.status [ fhir:value "draft"]; # 
+  fhir:TestScript.experimental [ fhir:value "true"^^xsd:boolean]; # 
+  fhir:TestScript.date [ fhir:value "2022-12-27T13:00:51-04:00"^^xsd:dateTime]; # 
+  fhir:TestScript.publisher [ fhir:value "MITRE"]; # 
+  fhir:TestScript.contact [
+     fhir:index 0;
+     fhir:ContactDetail.name [ fhir:value "MITRE" ];
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "url" ];
+       fhir:ContactPoint.value [ fhir:value "https://fhir-crucible.github.io/testscript-engine-ig" ]
+     ]
+  ]; # 
+  fhir:TestScript.fixture [
+     fhir:index 0;
+     fhir:Element.id [ fhir:value "notUsed" ];
+     fhir:TestScript.fixture.autocreate [ fhir:value "false"^^xsd:boolean ];
+     fhir:TestScript.fixture.autodelete [ fhir:value "false"^^xsd:boolean ];
+     fhir:TestScript.fixture.resource [
+       fhir:link <https://fhir-crucible.github.io/testscript-engine-ig/Patient/patient-fixture>;
+       fhir:Reference.reference [ fhir:value "Patient/patient-fixture" ]
+     ]
+  ]; # 
+  fhir:TestScript.variable [
+     fhir:index 0;
+     fhir:TestScript.variable.name [ fhir:value "checkValue" ];
+     fhir:TestScript.variable.defaultValue [ fhir:value "example" ];
+     fhir:TestScript.variable.description [ fhir:value "value that will be compared" ]
+  ]; # 
+  fhir:TestScript.test [
+     fhir:index 0;
+     fhir:TestScript.test.name [ fhir:value "string compare" ];
+     fhir:TestScript.test.action [
+       fhir:index 0;
+       fhir:TestScript.test.action.assert [
+         fhir:TestScript.setup.action.assert.label [ fhir:value "compare_receiver_value" ];
+         fhir:TestScript.setup.action.assert.description [ fhir:value "compare received value" ];
+         fhir:TestScript.setup.action.assert.expression [ fhir:value "'Chalmers'" ];
+         fhir:TestScript.setup.action.assert.sourceId [ fhir:value "notUsed" ];
+         fhir:TestScript.setup.action.assert.value [ fhir:value "${checkValue}" ];
+         fhir:TestScript.setup.action.assert.warningOnly [ fhir:value "false"^^xsd:boolean ]
+       ]
+     ]
+  ] . # 
+
+# - ontology header ------------------------------------------------------------
+
+<https://fhir-crucible.github.io/testscript-engine-ig/TestScript/subtest-to-execute-example.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,94 @@
+{
+  "resourceType" : "TestScript",
+  "id" : "subtest-execution-example",
+  "meta" : {
+    "profile" : ["https://fhir-crucible.github.io/testscript-engine-ig/StructureDefinition/testscript-engine-testscript"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: TestScript</b><a name=\"subtest-execution-example\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource TestScript &quot;subtest-execution-example&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-testscript-engine-testscript.html\">TestScript Engine TestScript</a></p></div><p><b>url</b>: <code>https://github.com/fhir-crucible/testscript-generator/SubtestExecutionExample</code></p><p><b>version</b>: 0.0.1</p><p><b>name</b>: SubtestExecutionExample</p><p><b>title</b>: Subtest execution example</p><p><b>status</b>: draft</p><p><b>experimental</b>: true</p><p><b>date</b>: 2022-12-27 13:00:51-0400</p><p><b>publisher</b>: MITRE</p><p><b>contact</b>: MITRE: <a href=\"https://fhir-crucible.github.io/testscript-engine-ig\">https://fhir-crucible.github.io/testscript-engine-ig</a></p><blockquote><p><b>fixture</b></p><p><b>autocreate</b>: false</p><p><b>autodelete</b>: false</p><p><b>resource</b>: <a href=\"Patient-patient-fixture.html\">Patient/patient-fixture</a> &quot; CHALMERS&quot;</p></blockquote><h3>Variables</h3><table class=\"grid\"><tr><td>-</td><td><b>Name</b></td><td><b>DefaultValue</b></td><td><b>Description</b></td></tr><tr><td>*</td><td>directExecuteInput</td><td>wrong</td><td>value that will be compared on direct execution</td></tr></table><blockquote><p><b>test</b></p><p><b>name</b>: Direct subtest execution</p><blockquote><p><b>action</b></p><h3>Asserts</h3><table class=\"grid\"><tr><td>-</td><td><b>Extension</b></td><td><b>Label</b></td><td><b>Description</b></td><td><b>WarningOnly</b></td></tr><tr><td>*</td><td/><td>Directly_execute</td><td>Execute subtest directly</td><td>false</td></tr></table></blockquote></blockquote><blockquote><p><b>test</b></p><p><b>name</b>: Each value subtest execution one required</p><blockquote><p><b>action</b></p><h3>Asserts</h3><table class=\"grid\"><tr><td>-</td><td><b>Extension</b></td><td><b>Label</b></td><td><b>Description</b></td><td><b>Expression</b></td><td><b>SourceId</b></td><td><b>WarningOnly</b></td></tr><tr><td>*</td><td/><td>Execute_subtest_on_list_of_values</td><td>Execute_subtest_on_list_of_values</td><td>name.family</td><td>testPatient</td><td>false</td></tr></table></blockquote></blockquote></div>"
+  },
+  "url" : "https://github.com/fhir-crucible/testscript-generator/SubtestExecutionExample",
+  "version" : "0.0.1",
+  "name" : "SubtestExecutionExample",
+  "title" : "Subtest execution example",
+  "status" : "draft",
+  "experimental" : true,
+  "date" : "2022-12-27T13:00:51-04:00",
+  "publisher" : "MITRE",
+  "contact" : [{
+    "name" : "MITRE",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://fhir-crucible.github.io/testscript-engine-ig"
+    }]
+  }],
+  "fixture" : [{
+    "id" : "testPatient",
+    "autocreate" : false,
+    "autodelete" : false,
+    "resource" : {
+      "reference" : "Patient/patient-fixture"
+    }
+  }],
+  "variable" : [{
+    "name" : "directExecuteInput",
+    "defaultValue" : "wrong",
+    "description" : "value that will be compared on direct execution"
+  }],
+  "test" : [{
+    "name" : "Direct subtest execution",
+    "action" : [{
+      "assert" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "testName",
+            "valueString" : "SubtestToExecuteExample"
+          },
+          {
+            "extension" : [{
+              "url" : "bindSource",
+              "valueString" : "directExecuteInput"
+            },
+            {
+              "url" : "bindTarget",
+              "valueString" : "checkValue"
+            }],
+            "url" : "bindVariable"
+          }],
+          "url" : "https://fhir-crucible.github.io/testscript-engine-ig/StructureDefinition/assert-subtest"
+        }],
+        "label" : "Directly_execute",
+        "description" : "Execute subtest directly",
+        "warningOnly" : false
+      }
+    }]
+  },
+  {
+    "name" : "Each value subtest execution one required",
+    "action" : [{
+      "assert" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "testName",
+            "valueString" : "SubtestToExecuteExample"
+          },
+          {
+            "url" : "bindEachTarget",
+            "valueString" : "checkValue"
+          },
+          {
+            "url" : "allMustPass",
+            "valueBoolean" : false
+          }],
+          "url" : "https://fhir-crucible.github.io/testscript-engine-ig/StructureDefinition/assert-subtest-each"
+        }],
+        "label" : "Execute_subtest_on_list_of_values",
+        "description" : "Execute_subtest_on_list_of_values",
+        "expression" : "name.family",
+        "sourceId" : "testPatient",
+        "warningOnly" : false
+      }
+    }]
+  }]
+}

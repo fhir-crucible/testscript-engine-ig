@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<TestReport xmlns="http://hl7.org/fhir">
+  <id value="subtest-executed-each-fail"/>
+  <meta>
+    <profile value="https://fhir-crucible.github.io/testscript-engine-ig/StructureDefinition/testscript-engine-testreport"/>
+  </meta>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: TestReport</b><a name="subtest-executed-each-fail"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource TestReport &quot;subtest-executed-each-fail&quot; </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-testscript-engine-testreport.html">TestScript Engine TestReport</a></p></div><blockquote><p><b>DynamicInput</b></p><p><b>value</b>: checkValue</p><p><b>value</b>: Windsor</p></blockquote><p><b>ExecutedAsSubtest</b>: true</p><p><b>ExecutedAsSubtestMustPass</b>: false</p><p><b>name</b>: TestReport for SubtestToExecuteExample</p><p><b>status</b>: completed</p><p><b>testScript</b>: <a href="https://github.com/fhir-crucible/testscript-generator/SubtestToExecuteExample">https://github.com/fhir-crucible/testscript-generator/SubtestToExecuteExample: SubtestToExecuteExample</a> &quot;SubtestToExecuteExample&quot;</p><p><b>result</b>: fail</p><p><b>score</b>: 0</p><p><b>tester</b>: The MITRE Corporation</p><p><b>issued</b>: 2022-12-28 17:14:30-0500</p><blockquote><p><b>test</b></p><blockquote><p><b>action</b></p><blockquote><p><b>assert</b></p><p><b>result</b>: fail</p><p><b>message</b>: Expression: Expected Expression equals [&quot;Windsor&quot;], but found [&quot;Chalmers&quot;].</p></blockquote></blockquote></blockquote></div>
+  </text>
+  <extension url="https://fhir-crucible.github.io/testscript-engine-ig/StructureDefinition/dynamic-input">
+    <extension url="variableName">
+      <valueString value="checkValue"/>
+    </extension>
+    <extension url="value">
+      <valueString value="Windsor"/>
+    </extension>
+  </extension>
+  <extension url="https://fhir-crucible.github.io/testscript-engine-ig/StructureDefinition/executed-as-subtest">
+    <valueBoolean value="true"/>
+  </extension>
+  <extension url="https://fhir-crucible.github.io/testscript-engine-ig/StructureDefinition/executed-as-subtest-must-pass">
+    <valueBoolean value="false"/>
+  </extension>
+  <name value="TestReport for SubtestToExecuteExample"/>
+  <status value="completed"/>
+  <testScript>
+    <reference value="https://github.com/fhir-crucible/testscript-generator/SubtestToExecuteExample"/>
+    <type value="TestScript"/>
+    <display value="SubtestToExecuteExample"/>
+  </testScript>
+  <result value="fail"/>
+  <score value="0"/>
+  <tester value="The MITRE Corporation"/>
+  <issued value="2022-12-28T17:14:30-05:00"/>
+  <test>
+    <action>
+      <assert id="compare_receiver_value">
+        <result value="fail"/>
+        <message value="Expression: Expected Expression equals [&quot;Windsor&quot;], but found [&quot;Chalmers&quot;]."/>
+      </assert>
+    </action>
+  </test>
+</TestReport>

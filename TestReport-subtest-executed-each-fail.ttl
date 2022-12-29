@@ -1,0 +1,73 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://fhir-crucible.github.io/testscript-engine-ig/TestReport/subtest-executed-each-fail> a fhir:TestReport;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "subtest-executed-each-fail"]; # 
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://fhir-crucible.github.io/testscript-engine-ig/StructureDefinition/testscript-engine-testreport";
+       fhir:index 0;
+       fhir:link <https://fhir-crucible.github.io/testscript-engine-ig/StructureDefinition/testscript-engine-testreport>
+     ]
+  ]; # 
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "extensions" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: TestReport</b><a name=\"subtest-executed-each-fail\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource TestReport &quot;subtest-executed-each-fail&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-testscript-engine-testreport.html\">TestScript Engine TestReport</a></p></div><blockquote><p><b>DynamicInput</b></p><p><b>value</b>: checkValue</p><p><b>value</b>: Windsor</p></blockquote><p><b>ExecutedAsSubtest</b>: true</p><p><b>ExecutedAsSubtestMustPass</b>: false</p><p><b>name</b>: TestReport for SubtestToExecuteExample</p><p><b>status</b>: completed</p><p><b>testScript</b>: <a href=\"https://github.com/fhir-crucible/testscript-generator/SubtestToExecuteExample\">https://github.com/fhir-crucible/testscript-generator/SubtestToExecuteExample: SubtestToExecuteExample</a> &quot;SubtestToExecuteExample&quot;</p><p><b>result</b>: fail</p><p><b>score</b>: 0</p><p><b>tester</b>: The MITRE Corporation</p><p><b>issued</b>: 2022-12-28 17:14:30-0500</p><blockquote><p><b>test</b></p><blockquote><p><b>action</b></p><blockquote><p><b>assert</b></p><p><b>result</b>: fail</p><p><b>message</b>: Expression: Expected Expression equals [&quot;Windsor&quot;], but found [&quot;Chalmers&quot;].</p></blockquote></blockquote></blockquote></div>"
+  ]; # 
+  fhir:DomainResource.extension [
+     fhir:index 0;
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "variableName" ];
+       fhir:Extension.valueString [ fhir:value "checkValue" ]
+     ], [
+       fhir:index 1;
+       fhir:Extension.url [ fhir:value "value" ];
+       fhir:Extension.valueString [ fhir:value "Windsor" ]
+     ];
+     fhir:Extension.url [ fhir:value "https://fhir-crucible.github.io/testscript-engine-ig/StructureDefinition/dynamic-input" ]
+  ], [
+     fhir:index 1;
+     fhir:Extension.url [ fhir:value "https://fhir-crucible.github.io/testscript-engine-ig/StructureDefinition/executed-as-subtest" ];
+     fhir:Extension.valueBoolean [ fhir:value "true"^^xsd:boolean ]
+  ], [
+     fhir:index 2;
+     fhir:Extension.url [ fhir:value "https://fhir-crucible.github.io/testscript-engine-ig/StructureDefinition/executed-as-subtest-must-pass" ];
+     fhir:Extension.valueBoolean [ fhir:value "false"^^xsd:boolean ]
+  ]; # 
+  fhir:TestReport.name [ fhir:value "TestReport for SubtestToExecuteExample"]; # 
+  fhir:TestReport.status [ fhir:value "completed"]; # 
+  fhir:TestReport.testScript [
+     fhir:link <https://github.com/fhir-crucible/testscript-generator/SubtestToExecuteExample>;
+     fhir:Reference.reference [ fhir:value "https://github.com/fhir-crucible/testscript-generator/SubtestToExecuteExample" ];
+     fhir:Reference.type [ fhir:value "TestScript" ];
+     fhir:Reference.display [ fhir:value "SubtestToExecuteExample" ]
+  ]; # 
+  fhir:TestReport.result [ fhir:value "fail"]; # 
+  fhir:TestReport.score [ fhir:value "0"^^xsd:decimal]; # 
+  fhir:TestReport.tester [ fhir:value "The MITRE Corporation"]; # 
+  fhir:TestReport.issued [ fhir:value "2022-12-28T17:14:30-05:00"^^xsd:dateTime]; # 
+  fhir:TestReport.test [
+     fhir:index 0;
+     fhir:TestReport.test.action [
+       fhir:index 0;
+       fhir:TestReport.test.action.assert [
+         fhir:Element.id [ fhir:value "compare_receiver_value" ];
+         fhir:TestReport.setup.action.assert.result [ fhir:value "fail" ];
+         fhir:TestReport.setup.action.assert.message [ fhir:value "Expression: Expected Expression equals [\"Windsor\"], but found [\"Chalmers\"]." ]
+       ]
+     ]
+  ] . # 
+
+# - ontology header ------------------------------------------------------------
+
+<https://fhir-crucible.github.io/testscript-engine-ig/TestReport/subtest-executed-each-fail.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+
